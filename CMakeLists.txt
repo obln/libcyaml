@@ -7,7 +7,7 @@ set(VERSION_PATCH 0)
 set(VERSION_DEVEL 1)
 set(VERSION_STR ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH})
 
-set(BUILD_TESTING OFF)
+set(BUILD_TESTING OFF CACHE BOOL "Enable testing")
 add_subdirectory(vendor/libyaml)
 
 add_library(LibCYaml STATIC src/mem.c src/free.c src/load.c src/save.c src/copy.c src/util.c src/utf8.c)
